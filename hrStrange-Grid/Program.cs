@@ -14,9 +14,15 @@
                 long col = nums[1];
                 bool evenRow = row % 2 == 0;
                 long num = row / 2;
-                if (evenRow && num > 0) --num;
+                if (evenRow && num > 0)
+                {
+                    --num;
+                }
                 num *= 10;
-                if (row % 2 == 0) ++num;
+                if (evenRow)
+                {
+                    ++num;
+                }
                 num += 2 * (col - 1);
                 Console.WriteLine(num);
             }
